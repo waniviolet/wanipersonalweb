@@ -1,0 +1,190 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">MENU</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a> 
+    <a href="biodata.html">Biodata</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body {
+	background-image: url(image/bird.gif);
+	background-position: center;
+	background-size: cover;
+}
+</style>
+<body link="#52BE80" vlink="#CB4335" alink="#2874A6">
+<link rel="stylesheet" type="text/css"
+href="style.css" />
+<title>MY PERSONAL WEBSITE</title>
+<a name="top"></a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div style="border:15px double #D35400; text-align: center; width: 30%; border-radius 25px; ">
+<h1>EDUCATION</h1>
+</div>
+
+
+</head>
+<body>
+
+<br>
+<br>
+<br>
+
+<!-- Trigger the Modal -->
+<img class="myImg" src="image/sk.png" alt="Sekolah Kebangsaan Damansara Damai 1" style="width:100%;max-width:300px">
+
+<h2  align="center">PRIMARY SCHOOL</h2>
+<p>2009 - 2014 </p>
+<p>Sekolah Kebangsaan Damansara Damai 1</p>
+<p>2, Jln PJU 10/1, Damansara Damai, 47830 Petaling Jaya, Selangor, Malaysia.</p>
+
+<br>
+<br>
+<br>
+
+<img class="myImg" src="image/agama.png" alt="KAFA Integrasi Al-Muhtadin" style="width:100%;max-width:300px">
+
+<h2  align="center">RELIGIOUS SCHOOL</h2>
+<p>2009 - 2014 </p>
+<p>KAFA Integrasi Al-Muhtadin</p>
+<p>Masjid Al-muhtadin, Jalan Pju 10/1d, Damansara Damai, 47830 Petaling Jaya, Selangor, Malaysia.</p>
+
+<br>
+<br>
+<br>
+
+<img class="myImg" src="image/smk.png" alt="Sekolah Menengah Kebangsaan Damansara Damai 1" style="width:100%;max-width:300px">
+
+<h2  align="center">SECONDARY  SCHOOL</h2>
+<p>2015 - 2019 </p>
+<p>Sekolah Menengah Kebangsaan Damansara Damai 1</p>
+<p>2, Jln PJU 10/1, Damansara Damai, 47830 Petaling Jaya, Selangor, Malaysia.</p>
+
+<br>
+<br>
+<br>
+
+<img class="myImg" src="image/uitm.jpg" alt="UiTM Kedah Campus Sungai Petani" style="width:100%;max-width:300px">
+
+<h2  align="center">UNIVERSITY</h2>
+<p>2021 - 2023</p>
+<p>UiTM Kedah Campus Sungai Petani</p>
+<p>Universiti Teknologi MARA (UiTM) Cawangan Kedah, Kampus Sungai Petani, 08400 Merbok, Kedah, Malaysia.</p>
+
+<br>
+<br>
+<h4 align="left">-------PS: To view a full-page picture, click on the image.</h4>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementsByClassName('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var showModal = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+for (var i = 0; i < img.length; i++) {
+    img[i].addEventListener('click', showModal);
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 align="center">Copyright &copy; 2023 by Nur Syazwani Aziemah</h3>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
+
+<div style="background-color:none;color:white;padding:30px"></div>
+<div style="background-color:none;padding:30px 30px 2500px"></div>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<h3 align="center">Copyright &copy; 2023 by Nur Syazwani Aziemah</h3>
+</body>
+</html>

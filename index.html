@@ -1,0 +1,132 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">MENU</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a> 
+    <a href="biodata.html">Biodata</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body {
+	background-image: url(image/first.gif);
+	background-position: center;
+	background-size: cover;
+}
+</style>
+<body link="#52BE80" vlink="#CB4335" alink="#2874A6">
+<link rel="stylesheet" type="text/css"
+href="style.css" />
+<title>MY PERSONAL WEBSITE</title>
+<a name="top"></a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div style="border:15px double #D35400; text-align: center; width: 50%; border-radius 25px; ">
+<h1>MY PERSONAL WEBSITE</h1>
+</div>
+
+<center>
+<img src="image/welcome.gif" alt="Welcome" style="width:70%;height:80%;">
+<br>
+<br>
+<br>
+<u><h1 align="center">Hi! Welcome to my personal website.</h1></u>
+<br>
+<h2 align="center">Thank you for stopping by!</h2>
+<br>
+<i><h2 align="center">The purpose of the website is to completing my assigment IMD311 – Introduction to Web Content Management & Design.</h2></i>
+<br>
+<h2 align="center">In this website, you will find my biodata, experience, education, family and gallery ^^</h2>
+<br>
+<h2 align="center">In order to fulfil the requirement for this assignment, I have used all of the knowledge on coding taught by Sir Mohd Firdaus Bin Mohd Helmi.</h2>
+<br>
+<h2 align="center">On top of that, I also used my self-learning skills to explore and learn about website coding.</h2>
+<br>
+<i><h3 align="center">If you have any questions concerning me, please contact us at:</h3></i>
+<br>
+   <center>
+      <a href="https://www.instagram.com/waniviolet2/"  target="_blank"><img src="image/instagram.png" alt="Instagram" style="width:120px;height:120px;"></a>
+<h4><a href="https://www.instagram.com/waniviolet2" target="_blank">@waniviolet2</a></h4>
+   </center>
+<br>
+   <center>
+      <a href="http://www.wasap.my/60133835365" target="_blank"><img src="image/whatsapp.png" alt="Whatsapp" style="width:120px;height:120px;"></a>
+<h4><a href="http://www.wasap.my/60133835365" target="_blank">013 383 5365</a></h4>
+   </center>
+
+<h5 align="center">PS: Click on the icon or text for the direct link.</h5>
+
+</head>
+<body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 align="center">Copyright &copy; 2023 by Nur Syazwani Aziemah</h3>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
+
+<div style="background-color:none;color:white;padding:30px"></div>
+<div style="background-color:none;padding:30px 30px 2500px"></div>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

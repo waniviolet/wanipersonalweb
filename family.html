@@ -1,0 +1,248 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">MENU</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a> 
+    <a href="biodata.html">Biodata</a>
+    <a href="experience.html">Experience</a>
+    <a href="education.html">Education</a>
+    <a href="family.html">Family</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<style>
+body {
+	background-image: url(image/blue.jpg);
+	background-position: center;
+	background-size: cover;
+}
+</style>
+<body link="#52BE80" vlink="#CB4335" alink="#2874A6">
+<link rel="stylesheet" type="text/css"
+href="style.css" />
+<title>MY PERSONAL WEBSITE</title>
+<a name="top"></a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div style="border:15px double #D35400; text-align: center; width: 30%; border-radius 25px; ">
+<h1>FAMILY</h1>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="image/familyone.jpg" style="width:50%" border="5px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="image/familytwo.jpg" style="width:50%" border="5px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="image/familythree.jpg" style="width:50%" border="5px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="image/familyfour.jpg" style="width:50%" border="5px">
+  </div>
+
+
+
+  <!-- Image text -->
+  <div class="caption-container" style="height:7%">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="image/familyone.jpg" style="width:100%" onclick="currentSlide(1)" alt="FAMILY">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/familytwo.jpg" style="width:100%" onclick="currentSlide(2)" alt="Me with my parent">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/familythree.jpg" style="width:100%" onclick="currentSlide(3)" alt="Parent">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="image/familyfour.jpg" style="width:100%" onclick="currentSlide(4)" alt="Siblings">
+    </div>
+  </div>
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<br>
+<br>
+
+<table>
+<table border="3" width="50%" align="center" valign="middle" cellpadding="5" cellspacing="5" >
+
+<tr align="center">
+<th rowspan="3" bgcolor="#F8C471">PARENT</th>
+<th bgcolor="#F5B7B1">NAME</th>
+<th bgcolor="#F5B7B1">BIRTH DATE</th>
+</tr>
+
+<tr align="center">
+<td>Salam Bin Abdullah</td>
+<td>April  27th, 1974</td>
+</tr>
+
+<tr align="center">
+<td>Nur Ida Aniza Binti Hamza</td>
+<td>June 16th, 1979</td>
+</tr>
+
+<tr align="center">
+<th rowspan="7" bgcolor="#F8C471">SIBLINGS</th>
+<th bgcolor="#F5B7B1">NAME</th>
+<th bgcolor="#F5B7B1">BIRTH DATE</th>
+</tr>
+
+<tr align="center">
+<td>Nur Syazwani Aziemah Binti Salam</td>
+<td>March 21st, 2002</td>
+</tr>
+
+<tr align="center">
+<td>Mohamad Sulaiman Amir Bin Salam</td>
+<td>May 31st, 2003</td>
+</tr>
+
+<tr align="center">
+<td>Muhammad Nur Syawal Bin Salam</td>
+<td>October 24th, 2006</td>
+</tr>
+
+<tr align="center">
+<td>Siti Fatimah Azzahra Binti Salam</td>
+<td>March 9th, 2011</td>
+</tr>
+
+<tr align="center">
+<td>Muhammad Arif Syarifuddin Bin Salam</td>
+<td>March 9th, 2013</td>
+</tr>
+
+<tr align="center">
+<td>Nur Sumayyah Binti Salam</td>
+<td>October 29th, 2015</td>
+</tr>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 align="center">Copyright &copy; 2023 by Nur Syazwani Aziemah</h3>
+
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">⇧</button>
+
+<div style="background-color:none;color:white;padding:30px"></div>
+<div style="background-color:none;padding:30px 30px 2500px"></div>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
